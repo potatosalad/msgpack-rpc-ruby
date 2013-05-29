@@ -1,6 +1,6 @@
-# MessagePack-RPC
+# MessagePack::RPC [![Build Status](https://travis-ci.org/potatosalad/msgpack-rpc-ruby.png?branch=master)](https://travis-ci.org/potatosalad/msgpack-rpc-ruby) [![Coverage Status](https://coveralls.io/repos/potatosalad/msgpack-rpc-ruby/badge.png?branch=master)](https://coveralls.io/r/potatosalad/msgpack-rpc-ruby?branch=master)
 
-MessagePack-RPC, asynchronous RPC library using MessagePack
+MessagePack::RPC, asynchronous RPC library using MessagePack
 
 ## Installation
 

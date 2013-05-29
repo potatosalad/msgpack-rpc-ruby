@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = MessagePack::RPC::VERSION
   spec.authors       = ["FURUHASHI Sadayuki"]
   spec.email         = ["frsyuki@users.sourceforge.jp"]
-  spec.description   = %q{MessagePack-RPC, asynchronous RPC library using MessagePack}
-  spec.summary       = %q{MessagePack-RPC, asynchronous RPC library using MessagePack}
+  spec.description   = %q{MessagePack::RPC, asynchronous RPC library using MessagePack}
+  spec.summary       = %q{MessagePack::RPC, asynchronous RPC library using MessagePack}
   spec.homepage      = "http://msgpack.org/"
   spec.license       = "Apache License, Version 2.0"
 
