@@ -5,6 +5,7 @@ group :development do
 end
 
 group :test do
+  gem 'rspec'
   if ENV['CI']
     gem 'coveralls', require: false
   else
@@ -12,6 +13,8 @@ group :test do
     gem 'rb-fsevent'
   end
 end
+
+gem 'rake'
 
 # Specify your gem's dependencies in stormpack.gemspec
 gemspec
