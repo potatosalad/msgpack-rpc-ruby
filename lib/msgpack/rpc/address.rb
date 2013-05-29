@@ -47,7 +47,7 @@ module MessagePack
         SOCKADDR_INDEX = 1
       end
 
-      attr_reader :host, :ip, :original, :path, :port, :resolved
+      attr_reader :host, :ip, :original, :path, :port
 
       def initialize(address, port = nil)
         # Allow users to pass in a MessagePack::RPC::Address directly
