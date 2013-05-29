@@ -248,4 +248,5 @@ require 'msgpack/rpc/client'
 require 'msgpack/rpc/server'
 require 'msgpack/rpc/transport/base'
 require 'msgpack/rpc/transport/tcp'
-
+require 'msgpack/rpc/transport/udp'
+require 'msgpack/rpc/transport/unix'

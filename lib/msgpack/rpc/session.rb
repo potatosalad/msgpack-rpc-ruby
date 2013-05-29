@@ -42,7 +42,7 @@ class Session
 
 	# backward compatibility
 	def host  #:nodoc:
-		@address.host
+		@address.ip.to_s
 	end
 
 	# call-seq:

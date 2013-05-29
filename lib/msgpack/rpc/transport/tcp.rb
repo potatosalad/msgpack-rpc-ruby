@@ -198,8 +198,7 @@ class TCPServerTransport
 	# ServerTransport interface
 	def listen(server)
 		@server = server
-		host, port = *@address.unpack
-		@lsock  = Cool.io::TCPServer.new(host, port, ServerSocket, @server)
+		@lsock  = Cool.io::TCPServer.new(@address.ip.to_s, @address.port, ServerSocket, @server)
 		begin
 			@server.loop.attach(@lsock)
 		rescue

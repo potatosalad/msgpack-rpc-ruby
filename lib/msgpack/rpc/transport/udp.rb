@@ -39,6 +39,10 @@ class UDPTransport
 
 		attr_reader :io
 
+		def close
+			io.close rescue nil
+		end
+
 		def on_readable
 			begin
 				data, addr = @io.recvfrom(64*1024) # FIXME buffer size
@@ -123,27 +127,26 @@ end
 class UDPServerTransport
 	def initialize(address)
 		@address = address
-		@sock = nil
+		@lsock = nil
 	end
 
 	# ServerTransport interface
 	def listen(server)
 		@server = server
-		host, port = *@address.unpack
 		io = UDPSocket.new
 		io.bind(*@address)
 
 		begin
-			@sock = ServerSocket.new(io, @server)
+			@lsock = ServerSocket.new(io, @server)
 		rescue
 			io.close
 			raise
 		end
 
 		begin
-			@server.loop.attach(@sock)
+			@server.loop.attach(@lsock)
 		rescue
-			@sock.close
+			@lsock.close
 			raise
 		end
 	end

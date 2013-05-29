@@ -57,7 +57,7 @@ end
 
 class UNIXClientTransport
 	def initialize(session, address)
-		io = UNIXSocket.new(address)
+		io = UNIXSocket.new(address.path)
 
 		begin
 			@sock = ClientSocket.new(io, session)
@@ -123,7 +123,7 @@ class UNIXServerTransport
 	# ServerTransport interface
 	def listen(server)
 		@server = server
-		@lsock  = Cool.io::UNIXServer.new(@address, ServerSocket, @server)
+		@lsock  = Cool.io::UNIXServer.new(@address.path, ServerSocket, @server)
 		begin
 			@server.loop.attach(@lsock)
 		rescue
